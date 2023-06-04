@@ -1,0 +1,134 @@
+@use "variables" as *;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-family: $fontRegular;
+	font-size: 1.6rem;
+	min-height: 100vh;
+	background-color: $creamColor;
+	color: $blackColor;
+}
+
+img {
+	-webkit-user-drag: none;
+	user-select: none;
+}
+
+// Header
+.header {
+	height: 10rem;
+	@include proFlex(row);
+	background-color: $primaryColor;
+	position: fixed;
+	inset: 0 0 auto 0;
+
+	// Nav
+	.nav {
+		@include container();
+		@include proFlex(row, space-between);
+
+		.logo {
+			width: 18rem;
+		}
+
+		.nav__input-container {
+			width: 60%;
+			height: 5rem;
+			@include proFlex(row, space-between);
+			background-color: $creamColor;
+			border: 0.5rem solid $secondaryColor;
+			border-radius: $radius;
+
+			.input-search-icon {
+				margin: 0 1rem;
+			}
+
+			.nav__search {
+				width: 100%;
+				height: 100%;
+				font-family: $fontBold;
+				font-size: 1.8rem;
+				margin-right: 1.2rem;
+				background-color: transparent;
+				border: none;
+				outline: none;
+			}
+		}
+
+		.nav__search-btn {
+			width: 18rem;
+			height: 5rem;
+			font-family: $fontBold;
+			font-size: 3.2rem;
+			background-color: $secondaryColor;
+			border-radius: $radius;
+			border: none;
+			cursor: pointer;
+		}
+	}
+}
+
+.main {
+	@include container();
+	@include proFlex(row, center);
+	flex-wrap: wrap;
+	gap: 4.5rem;
+	margin-top: 15rem;
+
+	.country-card {
+		width: 30rem;
+		border-radius: $radius;
+		box-shadow: $boxShadowValue;
+		background-color: $tertiaryColor;
+		padding-bottom: 3rem;
+
+		.img-container {
+			width: 100%;
+			overflow: hidden;
+			border-radius: $radius $radius 0 0;
+
+			.flag-img {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		.country-info {
+			margin-top: 3rem;
+			margin-left: 3rem;
+
+			.country-name {
+				font-size: 2.6rem;
+				margin-bottom: 0.2rem;
+			}
+
+			.continent-name {
+				text-transform: uppercase;
+				color: $grayColor;
+				margin-bottom: 1.5rem;
+			}
+
+			.country-info_container {
+				@include proFlex(row, flex-start);
+				margin-bottom: 0.5rem;
+
+				.country__info-icon {
+					margin-right: 0.5rem;
+				}
+
+				.info-text {
+					font-size: 1.8rem;
+				}
+			}
+		}
+	}
+}

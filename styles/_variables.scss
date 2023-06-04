@@ -1,0 +1,53 @@
+@use "fonts" as *;
+
+// Colors
+$primaryColor: #c38154;
+$secondaryColor: #ffc26f;
+$tertiaryColor: #f9e0bb;
+$creamColor: #f8ede3;
+$grayColor: #52616b;
+$blackColor: #222831;
+
+// Fonts
+$fontBold: PassionOne;
+$fontRegular: SecularOne;
+
+// Values
+$radius: 1rem;
+$boxShadowValue: 5px 5px 10px rgba(0, 0, 0, 0.25);
+
+// MixIns
+@mixin container() {
+	width: 100%;
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+	margin-right: auto;
+	margin-left: auto;
+
+	@media (min-width: 576px) {
+		width: 54rem;
+	}
+
+	@media (min-width: 768px) {
+		width: 72rem;
+	}
+
+	@media (min-width: 992px) {
+		width: 96rem;
+	}
+
+	@media (min-width: 1200px) {
+		width: 114rem;
+	}
+
+	@media (min-width: 1400px) {
+		width: 137rem;
+	}
+}
+
+@mixin proFlex($fd: row, $jc: center, $ai: center, $dis: flex) {
+	display: $dis;
+	flex-direction: $fd;
+	justify-content: $jc;
+	align-items: $ai;
+}
