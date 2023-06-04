@@ -189,7 +189,8 @@ img {
   margin-bottom: 0.5rem;
 }
 .main .country-card .country-info .country-info_container .country__info-icon {
-  margin-right: 0.5rem;
+  width: 2rem;
+  margin-right: 0.6rem;
 }
 .main .country-card .country-info .country-info_container .info-text {
   font-size: 1.8rem;
